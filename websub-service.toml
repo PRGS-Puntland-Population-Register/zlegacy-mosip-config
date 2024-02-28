@@ -87,12 +87,16 @@ CONSOLIDATOR_BASE_URL = "${mosip.consolidator.url}"
 # consolidator health endpoint
 CONSOLIDATOR_HEALTH_ENDPOINT = "/consolidator/actuator/health"
 
+# the following 2 keys are commented out because of https://community.mosip.io/t/websub-error-unused-configuration-value/1033
+# We made some bug fixes for the next release. For those fixes, two new configurations were added to 1.2.0.1-v3 branch, but since they are not used in the released version of websub, you are facing this error.
+#
+#Can you use the tagged version “v1.2.0.1-B2” of the config branch and try?
 #Encryption key that will be used to encrypt / decrypt the hub secret
-HUB_SECRET_ENCRYPTION_KEY = "${hub.secret.encryption.key}"
+#HUB_SECRET_ENCRYPTION_KEY = "${hub.secret.encryption.key}"
 
 # Below config will allow base64-encoded-bytes / alpha-numeric.
 # Recommended to use base64-encoded-bytes since alpha-numeric is considered less secure. This is just given to ensure the backward compatiblity
-HUB_SECRET_ENCRYPTION_KEY_FORMAT = "alpha-numeric"
+#HUB_SECRET_ENCRYPTION_KEY_FORMAT = "alpha-numeric"
 
 [ballerina.http.accessLogConfig]
 # Enable printing access logs in console
